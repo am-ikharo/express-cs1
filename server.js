@@ -10,8 +10,13 @@ const posts = [
     {id: 3, title: "post three"}
 ]
 
-app.get('/api/posts', (req, res) => {
+app.get('/api/post/:id', (req, res) => {
     const id = parseInt(req.params.id);
+    res.json(posts.filter((post) => post.id === id));
+})
+
+app.get('/api/posts', (req, res) => {
+    
     res.json(posts);
 })
 
