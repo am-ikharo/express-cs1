@@ -20,10 +20,7 @@ app.get('/api/posts', (req, res) => {
     res.json(posts);
 })
 
-app.post('/api/posts', (req, res) => {
-    
-    res.json(posts);
-})
+
 
 //creating a static server
 
