@@ -16,7 +16,7 @@ app.get('/api/post/:id', (req, res) => {
 })
 
 app.get('/api/posts', (req, res) => {
-    
+    console.log(req.query)
     res.json(posts);
 })
 
