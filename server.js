@@ -19,7 +19,8 @@ app.get('/api/post', (req, res) => {
 
 app.get('/api/post/:id', (req, res) => {
     const id = parseInt(req.params.id);
-    res.json(posts.filter((post) => post.id === id));
+    const post = res.json(posts.filter((post) => post.id === id));
+    
 })
 
 app.get('/api/posts', (req, res) => {
