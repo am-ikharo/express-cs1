@@ -1,6 +1,4 @@
 const express = require('express');
-const path = require('path');
-const port = process.env.PORT || 8080
 
 const app = express();
 
@@ -16,23 +14,9 @@ app.get('/api/post/:id', (req, res) => {
 })
 
 app.get('/api/posts', (req, res) => {
-    
     res.json(posts);
 })
 
 
 
-//creating a static server
-
-// app.use(express.static(path.join(__dirname, 'public')));
-
-// app.get('/', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'public', 'index.html'));
-// });
-
-// app.get('/about', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'public', 'about.html'));
-// });
-
-
-app.listen(port, () => console.log(`Server is running on port ${port}`));
+app.listen(8080, () => console.log(`Server is running on port 8080`))
