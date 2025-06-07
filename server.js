@@ -9,7 +9,12 @@ const posts = [
 ]
 
 app.get('/api/post', (req, res) => {
-    console.log(req.query);
+    const limit = parseInt(req.query.limit);
+    if (!isNaN(limit) && limit > 0) {
+        res.json(posts.slice(0,limit))
+    }else{
+        res.json(posts)
+    }
 })
 
 app.get('/api/post/:id', (req, res) => {
