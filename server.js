@@ -8,6 +8,10 @@ const posts = [
     {id: 3, title: "post three"}
 ]
 
+app.get('/api/post', (req, res) => {
+    console.log(req.query);
+})
+
 app.get('/api/post/:id', (req, res) => {
     const id = parseInt(req.params.id);
     res.json(posts.filter((post) => post.id === id));
